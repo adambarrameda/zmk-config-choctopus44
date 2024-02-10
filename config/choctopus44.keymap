@@ -57,12 +57,12 @@
 
         ret {
             bindings = <&kp RET>;
-            key-positions = <42 22>;
+            key-positions = <22 41>;
         };
 
         retii {
             bindings = <&kp RET>;
-            key-positions = <13 39>;
+            key-positions = <13 40>;
         };
 
         boot {
@@ -105,10 +105,10 @@
 
         def {
             bindings = <
-&kp GRAVE     &kp Q            &kp W      &kp E                     &kp R         &kp T                       &kp Y        &kp U      &kp I      &kp O     &kp P      &kp SEMI
-&kp LEFT_GUI  &mt LEFT_ALT A   &kp S      &kp D                     &kp F         &kp G                       &kp H        &kp J      &kp K      &kp L     &kp SQT    &slastk
-&kp LCTRL     &mt RIGHT_ALT Z  &kp X      &kp C                     &kp V         &kp B           &kp C_MUTE  &kp N        &kp M      &cmqst     &pdex     &kp MINUS  &kp EQUAL
-                               &kp LCTRL  &kp LS(LA(LC(LEFT_GUI)))  &lt 5 ESCAPE  &sk LEFT_SHIFT              &lt 3 SPACE  &lt 2 TAB  &lt 4 RET  &kp RALT
+&kp GRAVE     &kp Q            &kp W     &kp E                       &kp R         &kp T                       &kp Y        &kp U      &kp I       &kp O         &kp P      &kp SEMI
+&kp LEFT_GUI  &mt LEFT_ALT A   &kp S     &kp D                       &kp F         &kp G                       &kp H        &kp J      &kp K       &kp L         &kp SQT    &slastk
+&kp LCTRL     &mt RIGHT_ALT Z  &kp X     &kp C                       &kp V         &kp B           &kp C_MUTE  &kp N        &kp M      &cmqst      &pdex         &kp MINUS  &kp EQUAL
+                               &kp LEFT  &mt LS(LA(LC(LGUI))) RIGHT  &lt 5 ESCAPE  &sk LEFT_SHIFT              &lt 2 SPACE  &lt 3 TAB  &lt 4 DOWN  &kp UP_ARROW
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
