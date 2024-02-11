@@ -69,6 +69,86 @@
             bindings = <&bootloader>;
             key-positions = <0 11>;
         };
+
+        oprn {
+            bindings = <&oprn>;
+            key-positions = <7 8>;
+        };
+
+        cprn {
+            bindings = <&cprn>;
+            key-positions = <8 9>;
+        };
+
+        obkt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <32 33>;
+        };
+
+        cbkt {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <33 34>;
+        };
+
+        semi {
+            bindings = <&kp SEMI>;
+            key-positions = <20 21>;
+        };
+
+        eol {
+            bindings = <&kp LS(N4)>;
+            key-positions = <7 19>;
+        };
+
+        ampr {
+            bindings = <&kp LS(N7)>;
+            key-positions = <8 20>;
+        };
+
+        pipe {
+            bindings = <&kp LS(BACKSLASH)>;
+            key-positions = <9 21>;
+        };
+
+        bslh {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <21 22>;
+        };
+
+        hash {
+            bindings = <&kp LS(N3)>;
+            key-positions = <19 32>;
+        };
+
+        pct {
+            bindings = <&kp LS(N5)>;
+            key-positions = <33 20>;
+        };
+
+        cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <28 26>;
+        };
+
+        copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <26 27>;
+        };
+
+        pste {
+            bindings = <&kp LG(V)>;
+            key-positions = <28 27>;
+        };
+
+        undo {
+            bindings = <&kp LG(Z)>;
+            key-positions = <25 26>;
+        };
+
+        redo {
+            bindings = <&kp LG(LS(Z))>;
+            key-positions = <29 28>;
+        };
     };
 
     behaviors {
@@ -98,6 +178,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        oprn: oprn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "OPRN";
+            bindings = <&kp LS(N9)>, <&kp LS(COMMA)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        cprn: cprn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CPRN";
+            bindings = <&kp LS(N0)>, <&kp LS(PERIOD)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -105,7 +203,7 @@
 
         def {
             bindings = <
-&kp GRAVE     &kp Q            &kp W     &kp E                       &kp R         &kp T                       &kp Y        &kp U      &kp I       &kp O         &kp P      &kp SEMI
+&kp GRAVE     &kp Q            &kp W     &kp E                       &kp R         &kp T                       &kp Y        &kp U      &kp I       &kp O         &kp P      &kp GRAVE
 &kp LEFT_GUI  &mt LEFT_ALT A   &kp S     &kp D                       &kp F         &kp G                       &kp H        &kp J      &kp K       &kp L         &kp SQT    &slastk
 &kp LCTRL     &mt RIGHT_ALT Z  &kp X     &kp C                       &kp V         &kp B           &kp C_MUTE  &kp N        &kp M      &cmqst      &pdex         &kp MINUS  &kp EQUAL
                                &kp LEFT  &mt LS(LA(LC(LGUI))) RIGHT  &lt 5 ESCAPE  &sk LEFT_SHIFT              &lt 2 SPACE  &lt 3 TAB  &lt 4 DOWN  &kp UP_ARROW
